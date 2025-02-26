@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Revolusi Industri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .timeline:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: #007bff;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        .timeline-item {
+            flex: 1;
+            max-width: 250px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .timeline-item span {
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .industry-1 { background-color: #f39c12; }
+        .industry-2 { background-color: #2980b9; }
+        .industry-3 { background-color: #16a085; }
+        .industry-4 { background-color: #7f8c8d; }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: top 0.3s ease-in-out;
+        }
+
+        .timeline-item:hover::before {
+            top: 0; /* Background naik ke atas */
+        }
+
+        .timeline-item h2,
+        .timeline-item p,
+        .timeline-item span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body style="overflow-x: hidden;">
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Revolusi Industri</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Revolusi Industri</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sumber-Sumber
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://www.detik.com/" target="_blank">Detik.com</a></li>
+                    <li><a class="dropdown-item" href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></li>
+                    <li><a class="dropdown-item" href="https://www.gramedia.com/best-seller/perjalanan-revolusi-industri-1-0-hingga-5-0/?srsltid=AfmBOorUDFJKGVhQ3frKVG6HUUyC3E92PBnCYRfnI5CmgSXOsMAGmPPU" target="_blank">Gramedia.com</a></li>
+                    <li><a class="dropdown-item" href="https://www.kompas.com/tren/read/2023/06/05/074500865/mengenal-sejarah-dan-penemuan-revolusi-industri-kedua?page=all#google_vignette" target="_blank">kompas.com</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Kategori
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="1.0.html">Revolusi Industri 1.0</a></li>
+                    <li><a class="dropdown-item" href="2.0.html">Revolusi Industri 2.0</a></li>
+                    <li><a class="dropdown-item" href="3.0.html">Revolusi Industri 3.0</a></li>
+                    <li><a class="dropdown-item" href="4.0.html">Revolusi Industri 4.0</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <!-- Hero Section -->
+    <header class="text-center py-5 border border-5 rounded" style="margin-top: 3rem;">
+        <div class="container">
+            <h1>Revolusi Industri</h1>
+            <p>Mengubah dunia dengan inovasi dan teknologi</p>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <h2 class="text-center">Pengertian Revolusi Industri</h2>
+        <p class="text-center">Mengutip dari buku Pendidikan Kristen dan Revolusi Industri 4.0 oleh Nahason Bastin, revolusi industri adalah proses transisi ke manufaktur baru di Eropa dan Amerika Serikat (AS), pada periode antara 1760 hingga 1820 dan 1840. 
+            Transisi ini termasuk beralih dari produksi tangan ke mesin, manufaktur kimia baru dan proses produksi besi, mesin, peningkatan tenaga uap dan tenaga air dan lahirnya sistem pabrik mekanis.
+            Revolusi industri juga menyebabkan peningkatan laju pertumbuhan.
+        </p>
+        <p class="text-center">Melansir dari situs Universitas Binus, revolusi industri adalah keadaan saat banyak aspek kehidupan terpengaruh oleh perubahan global tersebut. 
+            Proses produksi ataupun jasa yang pada awalnya sulit, menghabiskan banyak waktu, dan menelan biaya mahal berubah menjadi lebih cepat dan lebih murah dalam prosesnya.
+        </p>
+        <p class="text-center">
+            Revolusi industri apabila dihubungkan dengan konsep ekonomi, akan menjadi salah satu cara bagi manusia berupaya menghadapi kelangkaan. 
+            Revolusi industri dapat menciptakan penurunan, bahkan menghilangkan kelangkaan tersebut. Dengan demikian, biaya, waktu, tenaga yang dibutuhkan sebelumnya cukup besar dapat menjadi tidak ada dan bisa dialihkan ke hal yang lain.
+        </p>
+        <p class="text-center">
+            <a href="https://www.detik.com/edu/detikpedia/d-6438001/revolusi-industri-sejarah-dan-perkembangan-revolusi-industri-1-0-hingga-4-0" target="_blank">Sumber</a>
+        </p>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Industry Evolution</h1>
+        <div class="timeline d-flex justify-content-around" style="margin-bottom: -15rem; ">
+            <a href="1.0.html" style="text-decoration: none;" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-item industry-1" style="height: 15rem; background-image: url(img/rev1.0.png); object-fit: cover;">
+                <i class="fas fa-industry icon"></i>
+                <h2>Industry 1.0</h2>
+                <p>
+                    Mekanisasi, tenaga uap, alat tenun
+                </p>
+                <span>1760 - 1840</span>
+              </div>
+            </a>
+            <a href="2.0.html" style="text-decoration: none;" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-item industry-2" style="height: 20rem; margin-bottom: 6rem; background-image: url(img/rev2.0.png); object-fit: cover;">
+                  <i class="fas fa-cogs icon"></i>
+                  <h2>Industry 2.0</h2>
+                  <p>
+                      Produksi massal, jalur perakitan, energi listrik
+                  </p>
+                  <span>1870 - 1914</span>
+              </div>
+            </a>
+            <a href="1.0.html" style="text-decoration: none;" data-aos="fade-up" data-aos-delay="300">
+              <div class="timeline-item industry-3" style="height: 25rem;margin-bottom: 11rem; background-image: url(img/rev3.0.png); object-fit: cover;">
+                  <i class="fas fa-microchip icon"></i>
+                  <h2>Industry 3.0</h2>
+                  <p>
+                      Otomasi, komputer, dan elektronik
+                  </p>
+                  <span>1950 - 1970</span>
+              </div>
+            </a>
+            <a href="1.0.html" style="text-decoration: none;" data-aos="fade-up" data-aos-delay="400">
+              <div class="timeline-item industry-4" style="height: 30rem; margin-bottom: 16rem; background-image: url(img/industri4.0.jpg); object-fit: cover; ">
+                  <i class="fas fa-wifi icon"></i>
+                  <h2>Industry 4.0</h2>
+                  <p>
+                      Sistem cyber, IoT, jaringan
+                  </p>
+                  <span>2010 - sekarang</span>
+              </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4 p-5">
+        <div class="col">
+          <div class="card" data-aos="fade-down-right">
+            <a href="https://akcdn.detik.net.id/community/media/visual/2019/06/20/8501a192-5e12-4275-aa5d-3983a01cd161_11.jpeg?w=350" target="_blank"><img src="img/industri1.o.jpeg" class="card-img-top w-3" alt="..." style="height: 15rem; object-fit: cover;"></a>
+            <div class="card-body">
+              <h5 class="card-title">Revolusi Industri 1.0</h5>
+                <p class="card-text">Revolusi Industri 1.0 adalah periode transformatif yang terjadi pada abad ke-18, di mana terjadi peralihan dari produksi manual ke produksi menggunakan mesin. 
+                    Periode ini ditandai dengan penemuan mesin uap oleh James Watt pada tahun 1784, yang mengubah berbagai sektor seperti pertanian, manufaktur, pertambangan, transportasi, dan teknologi.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" data-aos="fade-down-left">
+            <a href="https://asset.kompas.com/crops/yZV47ZWL4jeJMjxLR7JwDN0XbqI=/0x82:1024x765/1200x800/data/photo/2023/06/04/647c7bdb418c6.jpeg" target="_blank"><img src="img/industri2.0.jpg" class="card-img-top" alt="..." style="height: 15rem; object-fit: cover;"></a>
+            <div class="card-body">
+              <h5 class="card-title">Revolusi Industri 2.0</h5>
+                <p class="card-text">Kemunculan revolusi industri 2.0 terjadi di awal abad ke-20 yang dikenal dengan revolusi teknologi. 
+                    Revolusi industri yang terjadi ini ditandai dengan adanya penemuan tenaga listrik yang membuat mesin uap yang tadinya sering digunakan dalam proses produksi semakin lama digantikan dengan adanya tenaga listrik tersebut.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" data-aos="fade-up-right">
+            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmajoo.id%2Fsolusi%2Fdetail%2Frevolusi-industri&psig=AOvVaw144HNoGK6EUdxlOlWfQhtk&ust=1740573450626000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCNjWntLs3osDFQAAAAAdAAAAABAE" target="_blank"><img src="img/industri3.0.jpg" class="card-img-top" alt="" style="height: 15rem; object-fit: cover;"></a>
+            <div class="card-body">
+              <h5 class="card-title">Revolusi Industri 3.0</h5>
+                <p class="card-text">Kemunculan revolusi industri 3.0 yang terjadi pada akhir abad ke-20 ditandai dengan adanya teknologi digital serta internet. 
+                    Berdasarkan sosiolog Inggris yaitu David Harvey yang mengemukakan cara pandangnya mengenai revolusi industri yang terjadi di masa ini sebagai sebuah proses pemampatan ruang dan waktu yang semakin terkompresi.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" data-aos="fade-up-left">
+            <a href="https://elmecon-mk.com/wp-content/uploads/2024/09/Revolusi-Industri-4.0-scaled.jpg#20816" target="_blank"><img src="img/industri4.0.jpg" class="card-img-top" alt="..." style="height: 15rem; object-fit: cover;"></a>
+            <div class="card-body">
+              <h5 class="card-title">Revolusi Industri 4.0</h5>
+              <p class="card-text">Revolusi industri 4.0 yang terjadi pada awal abad ke-21 merupakan sebuah revolusi dimana manusia telah menemukan pola baru dengan adanya kemajuan teknologi yang terjadi begitu cepat sehingga mengancam berbagai perusahaan yang lebih konvensional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Footer -->
+    <footer id="kontak" class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Revolusi Industri | dlanramadhan</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
